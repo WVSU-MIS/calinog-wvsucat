@@ -168,7 +168,7 @@ def app():
     college = colleges[0]
     options = []
     for college in colleges:
-        if college != 'Nan':
+        if college != 'nan':
             options.append(college)
         
     selected_option = st.selectbox('Select the college', options)
