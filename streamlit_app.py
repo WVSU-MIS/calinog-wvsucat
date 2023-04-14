@@ -164,10 +164,12 @@ def app():
     df['Slots'] = merged['Slots']
     
     #This section will filter by college
-    college = 'CIT'
+    colleges = list(df['College'].unique())
+    college = colleges[0]
     options = []
-    for college in list(df['College'].unique()):
-        options.append(college)
+    for college in colleges:
+        if college != Nan:
+            options.append(college)
         
     selected_option = st.selectbox('Select the college', options)
     if selected_option != 'All':
