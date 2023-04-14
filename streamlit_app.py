@@ -164,7 +164,7 @@ def app():
     df['Slots'] = merged['Slots']
     
     #This section will filter by college
-    college = 'CAF'
+    college = 'CIT'
     options = []
     for college in list(df['College'].unique()):
         options.append(college)
